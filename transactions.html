@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <script src="jquery-1.6.1.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Finanças - Transações</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+    <link rel="manifest" href="./icons/site.webmanifest">
+</head>
+
+<body>
+    <h2>Finanças</h2>
+
+
+
+    <div class="container">
+        <h4>Saldo atual</h4>
+
+        <h1 id="balance" class="balance">R$ 0.00</h1>
+
+        <div class="inc-exp-container">
+            <div>
+                <h4>Receitas</h4>
+                <p id="money-plus" class="money plus">+ R$0.00</p>
+            </div>
+
+            <div>
+                <h4>Despesas</h4>
+                <p id="money-minus" class="money minus">- R$0.00</p>
+            </div>
+        </div>
+
+        <h3>Transações</h3>
+
+        <ul id="transactions" class="transactions"></ul>
+
+        <h3>Adicionar transação</h3>
+
+        <form id="form">
+            <div class="form-control">
+                <label for="textTransaction">Nome</label>
+                <input autofocus type="text" id="textTransaction" placeholder="Nome da transação" />
+            </div>
+
+            <div class="form-control">
+                <label for="amountTransaction">Valor <br>
+                </label><br />
+                <input type="number" id="amountTransaction" placeholder="Valor da transação" />
+            </div>
+
+            <div class="form-control">
+                <label for="motivoTransaction">Observação</label><br>
+                <input type="text" id="motivoTransaction" placeholder="Observação" />
+            </div>
+
+            <div class="form-control">
+                <label for="transactionType">Tipo</label><br />
+                <select id="transactionType">
+                    <option id="selectType" value="selectType" selected>--- Selecione ---</option>
+                    <option id="incomeTransaction" value="income">Receita</option>
+                    <option id="expenseTransaction" value="expense">Despesa</option>
+                </select>
+                <div class="form-control">
+                    <label for="monthType">Mês</label><br />
+                    <select id="monthType">
+                        <option id="selectType" value="selectType" selected>--- Selecione ---</option>
+                        <option id="monthtransaction" value="jan">Janeiro</option>
+                        <option id="monthtransaction" value="fev">Fevereiro</option>
+                        <option id="monthtransaction" value="mar">Março</option>
+                        <option id="monthtransaction" value="abr">Abril</option>
+                        <option id="monthtransaction" value="mai">Maio</option>
+                        <option id="monthtransaction" value="jun">Junho</option>
+                        <option id="monthtransaction" value="jul">Julho</option>
+                        <option id="monthtransaction" value="ago">Agosto</option>
+                        <option id="monthtransaction" value="set">Setembro</option>
+                        <option id="monthtransaction" value="out">Outubro</option>
+                        <option id="monthtransaction" value="nov">Novembro</option>
+                        <option id="monthtransaction" value="dez">Dezembro</option>
+                    </select>
+                </div>
+
+                <button class="btn" onclick="updateBalanceValues()">Adicionar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    
+
+</body>
+
+</html>

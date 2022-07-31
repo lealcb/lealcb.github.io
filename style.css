@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  margin: 30px auto;
+  width: 350px;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+  color: #ffffff;
+}
+h2 {
+  font-size: 25px;
+  color:#dedede;
+}
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+  color: #ffffff;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+p.plus
+{
+  color: #59eb05;
+}
+
+p.minus
+{
+  color: #d83019;
+}
+
+.inc-exp-container {
+  background-color: rgba(94, 94, 94, 0.753);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+
+
+label {
+  text-align: center;
+  display: block;
+  margin: 10px 0;
+  color: #dedede;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='tel'],
+input[type='password'],
+select {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #fcfcfc;
+  box-shadow: var(--box-shadow);
+  color: rgb(0, 0, 0);
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+.primeiroBotao {
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	background-color:#33bdef;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+.primeiroBotao:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+	background-color:#019ad2;
+}
+.primeiroBotao:active {
+	position:relative;
+	top:1px;
+}
+
+.transactions li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.transactions li.plus {
+  border-right: 10px solid #2ecc71;
+}
+
+.transactions li.minus {
+  border-right: 10px solid #c0392b;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 0;
+  color: rgb(255, 0, 0);
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.transactions li:hover .delete-btn {
+  opacity: 1;
+}
